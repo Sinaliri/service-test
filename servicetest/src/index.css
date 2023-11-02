@@ -19,3 +19,8 @@ code {
 .MuiGrid-item{
   padding-left: 0 !important;
 }
+a{
+  text-decoration: none;
+  color: inherit;
+  /* color: #07020F; */
+}

@@ -18,6 +18,8 @@ const Custominput = ({
   helperText = "",
   name,
   icon,
+  placeHolder,
+  validationIsNeeded = false,
 }) => {
   const [showPassword, setShowPassword] = useState(
     type === "password" ? false : true
@@ -28,7 +30,7 @@ const Custominput = ({
     event.preventDefault();
   };
   const Validation = () => {
-    if (!value) {
+    if (!value && validationIsNeeded) {
       setError(true, () => console.log(error));
     } else {
       setError(false, () => console.log(error));
@@ -37,7 +39,7 @@ const Custominput = ({
   return (
     <FormControl
       sx={{
-        m: 1,
+        mt: 1,
         height: "56px",
         width: "100%",
         borderRadius: "20px",
@@ -66,7 +68,7 @@ const Custominput = ({
         inputProps={{
           className: "",
 
-          placeholder: name,
+          placeholder: placeHolder,
           style: {
             display: "flex",
             fontSize: "15px",
@@ -89,12 +91,12 @@ const Custominput = ({
             >
               {name === "password" && showPassword ? (
                 <VisibilityOff sx={{ fontSize: "inherit", color: "inherit" }} />
+              ) : name === "password" ? (
+                <Visibility sx={{ fontSize: "inherit", color: "inherit" }} />
               ) : (
-                name === "password" && (
-                  <Visibility sx={{ fontSize: "inherit", color: "inherit" }} />
-                )
+                icon
               )}
-              {name === "email" && icon}
+              {/* //   {name === "email" && } */}
             </IconButton>
           </InputAdornment>
         }

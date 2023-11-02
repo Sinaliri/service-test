@@ -6,6 +6,7 @@ import Apple from "../../../assets/Icons/Apple.svg";
 import CustomButton from "../../MuiShared/Button";
 import HalfBorder from "../../Modules/Halfborder";
 import { groupButton } from "../../../Utils/Variant";
+import { Link } from "react-router-dom";
 
 const DefaultTemplate = () => {
   return (
@@ -70,9 +71,11 @@ const DefaultTemplate = () => {
         className="serviceCenter"
         flexDirection={"column"}
       >
-        <CustomButton variant={"contained"} color={"primary"} margin="5px 0">
-          Sign in with password
-        </CustomButton>
+        <Link to="/login" style={{ width: "100%" }}>
+          <CustomButton variant={"contained"} color={"primary"} margin="5px 0">
+            Sign in with password
+          </CustomButton>
+        </Link>
       </Grid>
       <Grid
         item
@@ -83,13 +86,12 @@ const DefaultTemplate = () => {
         justifyContent={"center"}
         my={"20px"}
       >
-        =
         <Typography variant="span" color={"gray"}>
           Don't have an account?
         </Typography>
         <Typography variant="span" ml={"15px"} color={"primary"}>
           {" "}
-          Sign up
+          <Link to="/signup">Sign up</Link>
         </Typography>
       </Grid>
     </Grid>

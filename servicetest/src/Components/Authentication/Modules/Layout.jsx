@@ -6,6 +6,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import Custominput from "../../MuiShared/Custominput";
 import CustomCheckBox from "../../MuiShared/CustomCheckBox";
 import PushBack from "../../Modules/PushBack/PushBack";
+import { Link } from "react-router-dom";
 const Layout = ({ text, type, values, onChangeHandler }) => {
   return (
     <Grid
@@ -15,7 +16,7 @@ const Layout = ({ text, type, values, onChangeHandler }) => {
       pt={"52px"}
       flexDirection={"column"}
     >
-      <PushBack link={"/"} />
+      <PushBack />
       <Grid
         item
         xs={12}
@@ -40,7 +41,9 @@ const Layout = ({ text, type, values, onChangeHandler }) => {
           value={values.email}
           helperText="email is not valid"
           name="email"
+          placeHolder="email"
           icon={<EmailIcon />}
+          validationIsNeeded={true}
         />
         <Custominput
           type="password"
@@ -48,6 +51,8 @@ const Layout = ({ text, type, values, onChangeHandler }) => {
           value={values.password}
           helperText="password is not valid"
           name="password"
+          placeHolder="password"
+          validationIsNeeded={true}
           icon={<EmailIcon style={{ fontSize: "inherit" }} />}
         />
         <CustomCheckBox
@@ -111,17 +116,19 @@ const Layout = ({ text, type, values, onChangeHandler }) => {
         flexDirection={"row"}
         flexWrap={"nowrap"}
         justifyContent={"center"}
-        my={"20px"}
+        mt={"20px"}
       >
         <Typography variant="span" color={"gray"}>
           {type === "login"
             ? "Don't have an account?"
             : "Already have an account?"}
         </Typography>
-        <Typography variant="span" ml={"15px"} color={"primary"}>
-          {" "}
-          {type === "login" ? "Sign in" : "Sign up"}
-        </Typography>
+        <Link to={type === "login" ? "/signup" : "/login"}>
+          <Typography variant="span" ml={"15px"} color={"primary"}>
+            {" "}
+            {type === "login" ? "Sign up" : "Sign in"}
+          </Typography>
+        </Link>
       </Grid>
     </Grid>
   );

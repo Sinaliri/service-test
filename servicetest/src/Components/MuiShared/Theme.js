@@ -42,12 +42,16 @@ export const theme = createTheme({
     sectionHeader: {
       fontSize: "16px",
       fontWeight: 700,
-      color: "#7210FF", // Use color value instead of string
+      color: "#07030C", // Use color value instead of string
       lineHeight: "19.31px", // Correct property name to lowercase
     },
     span: {
       fontSize: "17px",
       fontWeight: 400,
+    },
+    boldText: {
+      fontSize: "14px",
+      fontWeight: 700,
     },
     h1: {
       fontSize: "33px",
@@ -68,6 +72,17 @@ export const theme = createTheme({
     h5: {
       fontSize: "13px",
       fontWeight: 400,
+    },
+    serviceTitle: {
+      fontSize: "15px",
+      fontWeight: 400,
+      lineHeight: "18.11px",
+    },
+    smallText: {
+      fontSize: "10px",
+      fontWeight: 400,
+      color: "#BBAAAA",
+      lineHeight: "12.7px",
     },
   },
 });

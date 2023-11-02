@@ -1,0 +1,27 @@
+.UserCardContainer {
+  height: 100px;
+  margin: 10px auto !important;
+  border: 1px solid #d4bfbf;
+  border-radius: 16px;
+  padding: 0 !important ;
+  // padding: 10px 0;
+  .UserImageWrapper {
+    height: 80px;
+    width: 80px;
+    border-radius: 14px;
+    object-fit: cover;
+    img {
+      height: 80px;
+      width: 80px;
+      border-radius: 14px;
+    }
+  }
+  .UserDescription {
+    padding-top: 0 !important ;
+    margin: 10px 0;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+}
