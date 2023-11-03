@@ -63,6 +63,7 @@ const Custominput = ({
         }}
         onBlur={Validation}
         error={error}
+        required={validationIsNeeded}
         sx={{ borderRadius: "20px", height: "56px" }}
         style={{ borderRadius: "20px" }}
         inputProps={{

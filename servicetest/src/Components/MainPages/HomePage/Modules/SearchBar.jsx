@@ -3,7 +3,7 @@ import Custominput from "../../../MuiShared/Custominput";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 const SearchBar = ({ value, ChangeHandler, placeHolder }) => {
   return (
-    <Grid item xs={12} mx={"20px"}>
+    <Grid item xs={12}>
       <Custominput
         value={value}
         onChangeHandler={ChangeHandler}

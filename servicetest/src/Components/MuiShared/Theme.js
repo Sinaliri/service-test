@@ -6,7 +6,7 @@ export const theme = createTheme({
       main: "#7210FF",
     },
     secondary: {
-      main: "#7210FF",
+      main: "#F2EDED",
     },
     gray: {
       main: "#707070",
@@ -83,6 +83,11 @@ export const theme = createTheme({
       fontWeight: 400,
       color: "#BBAAAA",
       lineHeight: "12.7px",
+    },
+    navbarItem: {
+      fontSize: "9px",
+      fontWeight: 400,
+      lineHeight: "10.86px",
     },
   },
 });

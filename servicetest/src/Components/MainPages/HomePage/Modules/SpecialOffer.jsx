@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import SectionHeader from "../../../Modules/SectionHeader/SectionHeader";
-import SectionHeaderimg from "../../../../assets/Images/banner.png";
+import { SpecialOffers } from "../../../../Utils/Variant";
 
 const SpecialOffer = () => {
   return (
@@ -11,7 +11,7 @@ const SpecialOffer = () => {
         link={"/main/specialOffers"}
       />
       <img
-        src={SectionHeaderimg}
+        src={SpecialOffers[0]}
         alt="SectionHeaderimg"
         width={"100%"}
         height={"132px"}

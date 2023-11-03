@@ -7,8 +7,18 @@ import CustomButton from "../../MuiShared/Button";
 import HalfBorder from "../../Modules/Halfborder";
 import { groupButton } from "../../../Utils/Variant";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { getUsers } from "../../../Utils/Api";
+import { useDispatch } from "react-redux";
+import { fetchData } from "../../../Redux/WorkerSlice/WorkerSlice";
 
 const DefaultTemplate = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    getUsers().then((res) => console.log(res.data));
+    dispatch(fetchData());
+  }, []);
   return (
     <Grid container spacing={2} margin={"0px"} flexDirection={"column"}>
       <Grid item xs={12} className="serviceCenter">

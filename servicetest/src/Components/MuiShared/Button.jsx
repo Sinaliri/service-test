@@ -11,7 +11,6 @@ const CustomButton = ({
   height = "58px",
   color = "primary",
 }) => {
-  console.log(color);
   return (
     <Button
       variant={variant}

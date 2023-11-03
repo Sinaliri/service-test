@@ -1,0 +1,16 @@
+.customDatePicker {
+  border-radius: 20px !important;
+  border-color: transparent !important;
+
+  .MuiInputBase-root {
+    border-radius: 20px !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    input {
+      padding: 16.5px 4px !important;
+    }
+    fieldset {
+      border-color: transparent !important;
+    }
+  }
+}

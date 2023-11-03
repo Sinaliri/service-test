@@ -1,0 +1,120 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "workers": [
+    {
+      "id": 1,
+      "position": "House Cleaning",
+      "price": "25",
+      "userName": "Kaley Danford",
+      "bookmarked": false,
+      "image": "https://picsum.photos/200/300",
+      "categoryId": "Cleaning",
+      "rate": "4.5",
+      "views": 1254
+    },
+    {
+      "id": 2,
+      "position": "Floor Cleaning",
+      "price": "126",
+      "userName": "Kaley Danford",
+      "bookmarked": false,
+      "image": "https://picsum.photos/200/300",
+      "categoryId": "Repairing",
+      "rate": "4.2",
+      "views": 1354
+    },
+    {
+      "id": 4,
+      "position": "Floor Cleaning",
+      "price": 360,
+      "userName": "John Kanrad",
+      "bookmarked": false,
+      "image": "https://picsum.photos/200/300",
+      "categoryId": "Laundry",
+      "rate": "4.2",
+      "views": 1354
+    },
+    {
+      "id": 3,
+      "position": "Roof Painting",
+      "price": 360,
+      "userName": "John Danford",
+      "bookmarked": false,
+      "image": "https://picsum.photos/200/300",
+      "categoryId": "Painting",
+      "rate": "3.2",
+      "views": 1254
+    },
+    {
+      "id": 5,
+      "position": "House Cleaning",
+      "price": "235",
+      "userName": "Kaley Danford",
+      "bookmarked": false,
+      "image": "https://picsum.photos/200/300",
+      "categoryId": "Plumbing",
+      "rate": "4.5",
+      "views": 1254
+    },
+    {
+      "id": 6,
+      "position": "Floor Cleaning",
+      "price": "1263",
+      "userName": "Kaleysfdf Danford",
+      "bookmarked": false,
+      "image": "https://picsum.photos/200/300",
+      "categoryId": "Shifting",
+      "rate": "4.2",
+      "views": 1354
+    },
+    {
+      "id": 7,
+      "position": "Floor Cleaning",
+      "price": 360,
+      "userName": "John Kanrad",
+      "bookmarked": false,
+      "image": "https://picsum.photos/200/300",
+      "categoryId": "Repairing",
+      "rate": "4.2",
+      "views": 1354
+    },
+    {
+      "id": 8,
+      "position": "Roof Painting",
+      "price": 360,
+      "userName": "John Danford",
+      "bookmarked": false,
+      "image": "https://picsum.photos/200/300",
+      "categoryId": "Painting",
+      "rate": "3.2",
+      "views": 1254
+    },
+    {
+      "id": 9,
+      "position": "Roof Painting",
+      "price": 360,
+      "userName": "John Danford",
+      "bookmarked": false,
+      "image": "https://picsum.photos/200/300",
+      "categoryId": "Painting",
+      "rate": "3.2",
+      "views": 1254
+    }
+  ]
+}

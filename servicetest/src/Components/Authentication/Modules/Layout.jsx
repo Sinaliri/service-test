@@ -7,7 +7,12 @@ import Custominput from "../../MuiShared/Custominput";
 import CustomCheckBox from "../../MuiShared/CustomCheckBox";
 import PushBack from "../../Modules/PushBack/PushBack";
 import { Link } from "react-router-dom";
-const Layout = ({ text, type, values, onChangeHandler }) => {
+const Layout = ({ text, type, values, onChangeHandler, submitHandler }) => {
+  const sendData = () => {
+    if (values.email && values.password) {
+      submitHandler(values);
+    }
+  };
   return (
     <Grid
       container
@@ -53,7 +58,6 @@ const Layout = ({ text, type, values, onChangeHandler }) => {
           name="password"
           placeHolder="password"
           validationIsNeeded={true}
-          icon={<EmailIcon style={{ fontSize: "inherit" }} />}
         />
         <CustomCheckBox
           value={values.rememberPassword}
@@ -61,7 +65,12 @@ const Layout = ({ text, type, values, onChangeHandler }) => {
           onChangleHandler={onChangeHandler}
         />
 
-        <CustomButton variant={"contained"} color={"primary"} margin="5px 0">
+        <CustomButton
+          variant={"contained"}
+          color={"primary"}
+          margin="5px 0"
+          onClickHandler={sendData}
+        >
           {type === "login" ? "Sign in" : "Sign up"}
         </CustomButton>
         {type === "login" && (

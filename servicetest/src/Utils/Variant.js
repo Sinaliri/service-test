@@ -10,6 +10,23 @@ import Shifting from "../assets/Icons/image 13.svg";
 import Plumbing from "../assets/Icons/image 14.svg";
 import user1 from "../assets/Images/user1.png";
 import user2 from "../assets/Images/user2.png";
+// Special offers
+import SectionHeaderimg from "../assets/Images/specialOfferBanner/banner.png";
+import SectionHeaderimg2 from "../assets/Images/specialOfferBanner/banner2.png";
+import HomeIcon from "@mui/icons-material/Home";
+import AutoStoriesOutlinedIcon from "@mui/icons-material/AutoStoriesOutlined";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import EmailIcon from "@mui/icons-material/Email";
+import PersonIcon from "@mui/icons-material/Person";
+import LanguageIcon from "@mui/icons-material/Language";
+import SecurityIcon from "@mui/icons-material/Security";
+import LocalAtmIcon from "@mui/icons-material/LocalAtm";
+import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
+import Brightness6OutlinedIcon from "@mui/icons-material/Brightness6Outlined";
+import CorporateFareIcon from "@mui/icons-material/CorporateFare";
+import QuestionMarkIcon from "@mui/icons-material/QuestionMark";
+import LogoutIcon from "@mui/icons-material/Logout";
+import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import { v4 as uuidv4 } from "uuid";
 
 export const groupButton = [
@@ -66,51 +83,128 @@ uniqueServices.unshift({ id: "All", title: "All" });
 
 console.log(uniqueServices);
 
-const Users = [
+// const Users = [
+//   {
+//     id: 1,
+//     position: "House Cleaning",
+//     price: "25",
+//     userName: "Kaley Danford",
+//     bookmarked: true,
+//     image: user1,
+//     categoryId: "Cleaning",
+//     rate: "4.5",
+//     views: 1254,
+//   },
+//   {
+//     id: 2,
+//     position: "Floor Cleaning",
+//     price: "126",
+//     userName: "Kaley Danford",
+//     bookmarked: false,
+//     image: user2,
+//     categoryId: "Repairing",
+//     rate: "4.2",
+//     views: 1354,
+//   },
+//   {
+//     id: 4,
+//     position: "Floor Cleaning",
+//     price: 360,
+//     userName: "John Kanrad",
+//     bookmarked: false,
+//     image: user1,
+//     categoryId: "Laundry",
+//     rate: "4.2",
+//     views: 1354,
+//   },
+//   {
+//     id: 3,
+//     position: "Roof Painting",
+//     price: 360,
+//     userName: "John Danford",
+//     bookmarked: true,
+//     image: user2,
+//     categoryId: "Painting",
+//     rate: "3.2",
+//     views: 1254,
+//   },
+// ];
+const SpecialOffers = [
+  SectionHeaderimg,
+  SectionHeaderimg2,
+  SectionHeaderimg,
+  SectionHeaderimg2,
+  SectionHeaderimg,
+];
+const navbarItems = [
+  { title: "Home", link: "/main", icon: <HomeIcon fontSize="inherit" /> },
   {
-    id: 1,
-    position: "House Cleaning",
-    price: "25",
-    userName: "Kaley Danford",
-    bookmarked: true,
-    image: user1,
-    categoryId: "Cleaning",
-    rate: "4.5",
-    views: 1254,
+    title: "Booking",
+    link: "/booking",
+    icon: <AutoStoriesOutlinedIcon fontSize="inherit" />,
   },
   {
-    id: 2,
-    position: "Floor Cleaning",
-    price: "126",
-    userName: "Kaley Danford",
-    bookmarked: false,
-    image: user2,
-    categoryId: "Repairing",
-    rate: "4.2",
-    views: 1354,
+    title: "Calendar",
+    link: "/calenda9r",
+    icon: <CalendarMonthIcon fontSize="inherit" />,
   },
+  { title: "Inbox", link: "/inbox", icon: <EmailIcon fontSize="inherit" /> },
   {
-    id: 4,
-    position: "Floor Cleaning",
-    price: 360,
-    userName: "John Kanrad",
-    bookmarked: false,
-    image: user1,
-    categoryId: "Laundry",
-    rate: "4.2",
-    views: 1354,
-  },
-  {
-    id: 3,
-    position: "Roof Painting",
-    price: 360,
-    userName: "John Danford",
-    bookmarked: true,
-    image: user2,
-    categoryId: "Painting",
-    rate: "3.2",
-    views: 1254,
+    title: "Profile",
+    link: "/profile",
+    icon: <PersonIcon fontSize="inherit" />,
   },
 ];
-
-export { uniqueServices, Users };
+const ProfileMenu = [
+  {
+    title: "Edit Profile",
+    link: "/profile/editprofile",
+    icon: <PersonIcon fontSize="inherit" />,
+  },
+  {
+    title: "Notification",
+    link: "/main/notifications",
+    icon: <NotificationsNoneOutlinedIcon fontSize="inherit" />,
+  },
+  {
+    title: "Payment",
+    link: "/profile/extrapages",
+    icon: <LocalAtmIcon fontSize="inherit" />,
+  },
+  {
+    title: "Security",
+    link: "/profile/extrapages",
+    icon: <SecurityIcon fontSize="inherit" />,
+  },
+  {
+    title: "Language",
+    link: "/profile/extrapages",
+    icon: <LanguageIcon fontSize="inherit" />,
+  },
+  {
+    title: "Dark mode",
+    link: "/profile/extrapages",
+    icon: <Brightness6OutlinedIcon fontSize="inherit" />,
+  },
+  {
+    title: "Privacy Policy",
+    link: "/profile/extrapages",
+    icon: <CorporateFareIcon fontSize="inherit" />,
+  },
+  {
+    title: "Help Center",
+    link: "/profile/extrapages",
+    icon: <QuestionMarkIcon fontSize="inherit" />,
+  },
+  {
+    title: "Invite Friends",
+    link: "/profile/extrapages",
+    icon: <PeopleAltIcon fontSize="inherit" />,
+  },
+  {
+    title: "Logout",
+    link: "/",
+    icon: <LogoutIcon fontSize="inherit" />,
+  },
+];
+export { uniqueServices, SpecialOffers, ProfileMenu, navbarItems };

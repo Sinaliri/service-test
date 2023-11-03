@@ -1,6 +1,8 @@
 import { Box, Grid, Typography } from "@mui/material";
 import styles from "./UserCard.module.scss";
 import BookmarkCheckBox from "../../MuiShared/BookmarkCheckBox";
+import { useDispatch } from "react-redux";
+import { updatebookmarks } from "../../../Redux/WorkerSlice/WorkerSlice";
 
 const UserCard = ({
   image,
@@ -14,6 +16,10 @@ const UserCard = ({
   id,
   bookmarkAvailable = false,
 }) => {
+  const dispatch = useDispatch();
+  const handleBookmarks = (id) => {
+    dispatch(updatebookmarks(id));
+  };
   return (
     <Grid
       item
@@ -37,8 +43,18 @@ const UserCard = ({
         <Typography variant="smallText">{`${rate} | ${views} views`}</Typography>
       </Grid>
       {bookmarkAvailable && (
-        <Grid item xs={1}>
-          <BookmarkCheckBox value={bookmarked} />
+        <Grid
+          item
+          xs={1}
+          justifyContent={"flex-end"}
+          display={"flex"}
+          alignItems={"flex-start"}
+        >
+          <BookmarkCheckBox
+            id={id}
+            value={bookmarked}
+            onChangleHandler={handleBookmarks}
+          />
         </Grid>
       )}
     </Grid>

@@ -1,21 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { Users } from "../../../Utils/Variant";
-import { Grid } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import UserCard from "../UserCard/UserCard";
 
-const UsersFilterByCategory = ({ id }) => {
+const UsersFilterByCategory = ({ id, Array, bookmarkAvailable = false }) => {
   const [filterUsers, setfilterUsers] = useState([]);
+  console.log(Array);
 
   useEffect(() => {
-    if (id === "All") {
-      return setfilterUsers(Users);
+    console.log(Array);
+    if (Array) {
+      if (id === "All") {
+        return setfilterUsers(Array);
+      }
+      const newUsers = Array.filter((item) => item["categoryId"] === id);
+      return setfilterUsers(newUsers);
     }
-    const newUsers = Users.filter((item) => item["categoryId"] === id);
-    return setfilterUsers(newUsers);
-  }, [id]);
+  }, [id, Array]);
   return (
     <Grid item xs={12} container>
-      {filterUsers.length > 0 &&
+      {filterUsers.length > 0 ? (
         filterUsers.map((item) => {
           return (
             <UserCard
@@ -29,9 +32,15 @@ const UsersFilterByCategory = ({ id }) => {
               bookmarked={item.bookmarked}
               rate={item.rate}
               key={item.id}
+              bookmarkAvailable={bookmarkAvailable}
             />
           );
-        })}
+        })
+      ) : (
+        <Box marginTop={"100px"} width={1} className="serviceCenter">
+          <Typography color={"gray.main"}> not founded </Typography>
+        </Box>
+      )}
     </Grid>
   );
 };
