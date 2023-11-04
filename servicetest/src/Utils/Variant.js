@@ -159,4 +159,5 @@ const ProfileMenu = [
     icon: <LogoutIcon fontSize="inherit" />,
   },
 ];
+// const terms = [{ name: "Living room", count: "0", id: "" }];
 export { uniqueServices, SpecialOffers, ProfileMenu, navbarItems };

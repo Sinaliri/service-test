@@ -3,6 +3,7 @@ import styles from "./UserCard.module.scss";
 import BookmarkCheckBox from "../../MuiShared/BookmarkCheckBox";
 import { useDispatch } from "react-redux";
 import { updatebookmarks } from "../../../Redux/WorkerSlice/WorkerSlice";
+import { Link, useNavigate } from "react-router-dom";
 
 const UserCard = ({
   image,
@@ -17,6 +18,7 @@ const UserCard = ({
   bookmarkAvailable = false,
 }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const handleBookmarks = (id) => {
     dispatch(updatebookmarks(id));
   };
@@ -28,6 +30,7 @@ const UserCard = ({
       spacing={2}
       className={styles.UserCardContainer}
       padding={0}
+      onClick={() => navigate("/main/service/booking/" + position)}
     >
       <Grid item xs={4} className="serviceCenter" padding={"0 !important"}>
         <Box className={`${styles.UserImageWrapper} serviceCenter`}>

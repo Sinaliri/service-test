@@ -15,6 +15,7 @@ const NewMessage = ({ id }) => {
     console.log("press");
     console.log(id);
     dispatch(sendNewMessage({ value, id }));
+    setValue("");
   };
   return (
     <Grid

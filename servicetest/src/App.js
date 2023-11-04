@@ -25,6 +25,7 @@ import { useEffect } from "react";
 import { fetchData } from "./Redux/WorkerSlice/WorkerSlice";
 import ExtraPages from "./Components/MainPages/ExtraPages/ExtraPages";
 import Messages from "./Components/MainPages/Inbox/Messages/Messages";
+import ServicesSubServices from "./Components/MainPages/ServicesSubServices/ServicesSubServices";
 
 function App() {
   return (
@@ -44,6 +45,10 @@ function App() {
             <Route path="/" element={<DefaultTemplate />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route
+              path="/main/service/booking/:name"
+              element={<ServicesSubServices />}
+            />
             <Route path="/main/services/:id" element={<ServiceDetail />} />
             <Route path="/main/services" element={<ServicePage />} />
             <Route path="/main/bookmarks" element={<Bookmarks />} />
