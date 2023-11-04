@@ -26,6 +26,7 @@ const EditProfile = () => {
       console.log(res.data);
       setRegisterationInfo(res.data);
     });
+    window.scrollTo(0, 0);
   }, []);
   const updateInfo = () => {
     editData(userId.id, registerationInfo).then((res) => {

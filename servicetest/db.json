@@ -116,5 +116,35 @@
       "rate": "3.2",
       "views": 1254
     }
+  ],
+  "communications": [
+    {
+      "id": 1,
+      "position": "House Cleaning",
+      "price": "25",
+      "userName": "Kaley Danford",
+      "bookmarked": false,
+      "image": "https://picsum.photos/200/300",
+      "categoryId": "Cleaning",
+      "rate": "4.5",
+      "views": 1254,
+      "unreadMessages":3,
+      "messages":[{"time":"20:00","text":"i will call you later","type":"received"}],
+      "calls":[{"type":"incomming","time":"20:00"}]
+    },
+    {
+      "id": 2,
+      "position": "Floor Cleaning",
+      "price": "126",
+      "userName": "Kaley Danford",
+      "bookmarked": false,
+      "image": "https://picsum.photos/200/300",
+      "categoryId": "Repairing",
+      "rate": "4.2",
+      "views": 1354,
+      "unreadMessages":4,
+      "messages":[{"time":"21:00","text":"see you tomorrow","type":"sent"}],
+      "calls":[{"type":"outComming","time":"22:00"}]
+    }
   ]
 }

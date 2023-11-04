@@ -1,0 +1,28 @@
+.inboxItem {
+  height: 55px;
+  margin-bottom: 9px;
+  .contactImage {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    object-fit: cover;
+    img {
+      width: inherit;
+      height: inherit;
+      border-radius: inherit;
+    }
+  }
+  .contactDetail {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  .unreadMessages {
+    margin-bottom: 5px;
+    height: 25px;
+    min-width: 25px;
+    max-width: fit-content;
+    border-radius: 50%;
+    color: #fff;
+  }
+}

@@ -11,6 +11,7 @@ import { userSelector } from "../../../Redux/selector";
 import { getUserData } from "../../../Utils/Api";
 import { setUser } from "../../../Redux/UserSlice/userSlice";
 import { useNavigate } from "react-router-dom";
+import { fetchInboxData } from "../../../Redux/InboxSlice/InboxSlice";
 
 const HomePage = () => {
   const [searchText, setSearchtext] = useState("");
@@ -29,6 +30,9 @@ const HomePage = () => {
       });
     }
   }, [Users]);
+  useEffect(() => {
+    dispatch(fetchInboxData());
+  }, []);
   return (
     <Grid
       container
@@ -38,17 +42,20 @@ const HomePage = () => {
       flexDirection={"column"}
       position={"relative"}
     >
-      <UserSummerizeInfo />
-      <SearchBar
-        value={searchText}
-        ChangeHandler={(e) => setSearchtext(e)}
-        placeHolder="search"
-      />
-      <SpecialOffer />
-      <Services />
-      <Divider sx={{ width: "100%" }} />
-      <Categories />
-      <Navbar />
+      <>
+        {" "}
+        <UserSummerizeInfo />
+        <SearchBar
+          value={searchText}
+          ChangeHandler={(e) => setSearchtext(e)}
+          placeHolder="search"
+        />
+        <SpecialOffer />
+        <Services />
+        <Divider sx={{ width: "100%" }} />
+        <Categories />
+        <Navbar />{" "}
+      </>
     </Grid>
   );
 };

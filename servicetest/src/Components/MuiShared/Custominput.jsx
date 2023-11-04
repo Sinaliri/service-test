@@ -20,6 +20,7 @@ const Custominput = ({
   icon,
   placeHolder,
   validationIsNeeded = false,
+  onkeyPress,
 }) => {
   const [showPassword, setShowPassword] = useState(
     type === "password" ? false : true
@@ -34,6 +35,14 @@ const Custominput = ({
       setError(true, () => console.log(error));
     } else {
       setError(false, () => console.log(error));
+    }
+  };
+  const handleKeyDown = (event) => {
+    if (onkeyPress) {
+      if (event.key === "Enter") {
+        // Handle Enter key press, for example, submit the input value
+        onkeyPress();
+      }
     }
   };
   return (
@@ -54,6 +63,7 @@ const Custominput = ({
         id="filled-adornment-password"
         type={showPassword ? "text" : type}
         value={value}
+        onKeyDown={handleKeyDown}
         onChange={(e) => {
           if (name) {
             onChangeHandler(e.target.value, name);

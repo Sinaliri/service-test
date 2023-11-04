@@ -81,54 +81,6 @@ for (const service of services) {
 const uniqueServices = Array.from(uniqueServiceMap.values());
 uniqueServices.unshift({ id: "All", title: "All" });
 
-console.log(uniqueServices);
-
-// const Users = [
-//   {
-//     id: 1,
-//     position: "House Cleaning",
-//     price: "25",
-//     userName: "Kaley Danford",
-//     bookmarked: true,
-//     image: user1,
-//     categoryId: "Cleaning",
-//     rate: "4.5",
-//     views: 1254,
-//   },
-//   {
-//     id: 2,
-//     position: "Floor Cleaning",
-//     price: "126",
-//     userName: "Kaley Danford",
-//     bookmarked: false,
-//     image: user2,
-//     categoryId: "Repairing",
-//     rate: "4.2",
-//     views: 1354,
-//   },
-//   {
-//     id: 4,
-//     position: "Floor Cleaning",
-//     price: 360,
-//     userName: "John Kanrad",
-//     bookmarked: false,
-//     image: user1,
-//     categoryId: "Laundry",
-//     rate: "4.2",
-//     views: 1354,
-//   },
-//   {
-//     id: 3,
-//     position: "Roof Painting",
-//     price: 360,
-//     userName: "John Danford",
-//     bookmarked: true,
-//     image: user2,
-//     categoryId: "Painting",
-//     rate: "3.2",
-//     views: 1254,
-//   },
-// ];
 const SpecialOffers = [
   SectionHeaderimg,
   SectionHeaderimg2,
@@ -145,7 +97,7 @@ const navbarItems = [
   },
   {
     title: "Calendar",
-    link: "/calenda9r",
+    link: "/calendar",
     icon: <CalendarMonthIcon fontSize="inherit" />,
   },
   { title: "Inbox", link: "/inbox", icon: <EmailIcon fontSize="inherit" /> },
@@ -168,37 +120,37 @@ const ProfileMenu = [
   },
   {
     title: "Payment",
-    link: "/profile/extrapages",
+    link: "/profile/extrapages/Payment",
     icon: <LocalAtmIcon fontSize="inherit" />,
   },
   {
     title: "Security",
-    link: "/profile/extrapages",
+    link: "/profile/extrapages/Security",
     icon: <SecurityIcon fontSize="inherit" />,
   },
   {
     title: "Language",
-    link: "/profile/extrapages",
+    link: "/profile/extrapages/Language",
     icon: <LanguageIcon fontSize="inherit" />,
   },
   {
     title: "Dark mode",
-    link: "/profile/extrapages",
+    link: "/profile/extrapages/Dark mode",
     icon: <Brightness6OutlinedIcon fontSize="inherit" />,
   },
   {
     title: "Privacy Policy",
-    link: "/profile/extrapages",
+    link: "/profile/extrapages/Privacy Policy",
     icon: <CorporateFareIcon fontSize="inherit" />,
   },
   {
     title: "Help Center",
-    link: "/profile/extrapages",
+    link: "/profile/extrapages/Help Center",
     icon: <QuestionMarkIcon fontSize="inherit" />,
   },
   {
     title: "Invite Friends",
-    link: "/profile/extrapages",
+    link: "/profile/extrapages/Invitations",
     icon: <PeopleAltIcon fontSize="inherit" />,
   },
   {

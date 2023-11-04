@@ -37,17 +37,22 @@ export const theme = createTheme({
     SeeAll: {
       fontSize: "12px",
       fontWeight: 700,
-      color: "#7210FF", // Use color value instead of string
+      color: "#7210FF",
     },
     sectionHeader: {
       fontSize: "16px",
       fontWeight: 700,
-      color: "#07030C", // Use color value instead of string
-      lineHeight: "19.31px", // Correct property name to lowercase
+      color: "#07030C",
+      lineHeight: "19.31px",
     },
     span: {
       fontSize: "17px",
       fontWeight: 400,
+    },
+    callsAndChat: {
+      fontSize: 12,
+      fontWeight: 700,
+      color: "#06010D",
     },
     boldText: {
       fontSize: "14px",

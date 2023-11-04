@@ -23,6 +23,8 @@ import { Provider, useDispatch } from "react-redux";
 import store from "./Redux/Store";
 import { useEffect } from "react";
 import { fetchData } from "./Redux/WorkerSlice/WorkerSlice";
+import ExtraPages from "./Components/MainPages/ExtraPages/ExtraPages";
+import Messages from "./Components/MainPages/Inbox/Messages/Messages";
 
 function App() {
   return (
@@ -51,11 +53,12 @@ function App() {
               path="/main/mostPopularServices"
               element={<MostPopularServices />}
             />
-            <Route path="/profile/extrapages/:id" element={<EditProfile />} />
+            <Route path="/profile/extrapages/:id" element={<ExtraPages />} />
             <Route path="/profile/editprofile" element={<EditProfile />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/booking" element={<Booking />} />
             <Route path="/calendar" element={<Calendar />} />
+            <Route path="/inbox/Messages/:id" element={<Messages />} />
             <Route path="/inbox" element={<Inbox />} />
             <Route path="/main" element={<HomePage />} />
           </Routes>

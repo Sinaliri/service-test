@@ -1,0 +1,51 @@
+.sentMessage {
+  padding: 10px;
+  border-radius: 12px 0 12px 12px;
+  align-self: flex-end;
+  background-color: #7210ff;
+  color: #fbf2f2;
+  line-height: 22px;
+  margin-top: 20px;
+  display: block;
+  max-width: 70%;
+
+  .text {
+    color: #fbf2f2;
+    word-break: break-all;
+    line-height: 22px !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+  }
+  .time {
+    width: 100%;
+    text-align: end !important;
+    font-size: 10px !important;
+    font-weight: 400 !important;
+    color: #fbf2f2 !important;
+  }
+}
+.recievedMessage {
+  max-width: 70%;
+
+  padding: 10px;
+  border-radius: 0 12px 12px 12px;
+  //   color: ;
+  background-color: #f2eded;
+  color: #171515;
+  line-height: 22px;
+  margin-top: 20px;
+  .text {
+    color: #171515;
+    word-break: break-all;
+    line-height: 22px !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+  }
+  .time {
+    width: 100%;
+    text-align: end !important;
+    font-size: 10px !important;
+    font-weight: 400 !important;
+    color: #a79f9f !important;
+  }
+}
